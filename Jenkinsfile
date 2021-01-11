@@ -17,7 +17,7 @@ pipeline {
 
         stage('Test Functional') {
           steps {
-            sh 'bin/test-functional.sh'
+            sh 'bin/test-functional.sh '
           }
         }
 
