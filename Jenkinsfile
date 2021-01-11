@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'python:3.9.1-alpine3.12'
+      image 'myapp:testenv'
     }
 
   }
