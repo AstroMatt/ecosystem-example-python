@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    docker {
-      image 'myapp:testenv'
-    }
-
-  }
+  agent any
   stages {
     stage('Test') {
       parallel {
