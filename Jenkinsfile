@@ -2,8 +2,25 @@ pipeline {
   agent any
   stages {
     stage('Test') {
-      steps {
-        sh 'bin/test-unit.sh'
+      parallel {
+        stage('Unit Test') {
+          steps {
+            sh 'bin/test-unit.sh'
+          }
+        }
+
+        stage('Test Integration') {
+          steps {
+            sh 'bin/test-integration.sh'
+          }
+        }
+
+        stage('Test Functional') {
+          steps {
+            sh 'bin/test-functional.sh'
+          }
+        }
+
       }
     }
 
