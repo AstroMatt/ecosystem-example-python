@@ -1,3 +1,5 @@
 #!/bin/sh
 
-echo 'Unit Tests'
+pip install -r requirements.txt
+cd example-py-unittest
+python -m unittest
