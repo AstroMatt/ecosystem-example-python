@@ -1,3 +1,5 @@
 #!/bin/sh
 
-echo 'test functional'
+cd example-py-doctest/
+python3 -m doctest -v doctests/*
+
