@@ -3,19 +3,19 @@ pipeline {
   stages {
     stage('Test') {
       steps {
-        sh 'echo "Test"'
+        sh 'bin/test-unit.sh'
       }
     }
 
     stage('Static Code Analysis') {
       steps {
-        sh 'echo "Static Code Analysis"'
+        sh 'bin/test-static.sh'
       }
     }
 
     stage('Make an Artifact') {
       steps {
-        sh 'echo "Make an Artifact"'
+        sh 'bin/make-artifact.sh'
       }
     }
 
